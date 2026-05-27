@@ -27,13 +27,13 @@ project_root/
 │
 └── training/
     └── train.py           # Neural network construction and fitting script
-
+```
 ## 2. Installation & Environment Setup
 Open your terminal environment and install the required data science, computer vision, and deep learning libraries:
 
 ```bash
 pip install opencv-python numpy albumentations scikit-learn tensorflow openpyxl matplotlib
-
+```
 ## 3. Operational Workflow
 
 To initialize, train, and deploy the vision pipeline, execute the primary modules in their strict chronological progression.
