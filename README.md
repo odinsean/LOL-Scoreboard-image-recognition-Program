@@ -1,4 +1,4 @@
-# League of Legends Scoreboard Image Recognition Program
+# League of Legends (LOL) Scoreboard Image Recognition Program
 
 An end-to-end Machine Learning pipeline designed to recognize League of Legends champions directly from in-game match scoreboard screenshots. By implementing an elegant spatial-interpolation mechanism, the system minimizes user friction, requiring only **two structural mouse clicks** to locate, crop, and identify all five champions within a team composition layout. 
 
