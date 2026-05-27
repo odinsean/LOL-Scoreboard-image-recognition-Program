@@ -86,7 +86,7 @@ Complete the same 2-click sequence (Click 1: Top icon center, Click 2: Support i
 
 The neural graph identifies each layout role position, prints the predicted champion composition directly to the console, and automatically appends a structured record row into a tracking spreadsheet named results.xlsx.
 
-### Strategic Core Engineering Notes
+## Strategic Core Engineering Notes
 Anchor Alignment: The mathematical spatial interpolation operates under the assumption of a fixed, linear structural layout standard to the League of Legends scoreboard UI. Always center your anchor clicks as perfectly as possible on the Top and Support frames to avoid misaligned bounding box crops down the line.
 
 Config Constants: Ensure variables such as ICON_SIZE_RATIO, IMAGE_SIZE_WH, and internal folder target directions are correctly configured inside config.py to map accurately to your localized file paths and layout parameters.
