@@ -1,6 +1,6 @@
 # League of Legends Scoreboard Image Recognition Program
  
-An end-to-end Machine Learning pipeline that automatically recognizes League of Legends champions from post-game scoreboard screenshots and logs them into an Excel file — built to speed up the scouting process for competitive LoL teams at any level.
+An end-to-end Machine Learning pipeline that automatically recognizes League of Legends champions from post-game scoreboard screenshots and logs them into an Excel file - built to speed up the scouting process for competitive LoL teams at any level.
  
 ---
  
@@ -52,7 +52,7 @@ Follow these phases in order the first time you set up the program.
  
 ### Phase 0: Download Champion Icons (`data/download_icons.py`)
  
-This only needs to be run once. It downloads every champion's icon directly from Riot's public API and saves them to your `champion_icons/` folder — no API key required.
+This only needs to be run once. It downloads every champion's icon directly from Riot's public API and saves them to your `champion_icons/` folder -no API key required.
  
 ```
 python data/download_icons.py
@@ -64,7 +64,7 @@ Each icon is automatically named after the champion (e.g. `Jinx.png`, `Ahri.png`
  
 ### Phase 1: Collect Scoreboard Icons (`data/collect_scoreboard_icons.py`)
  
-This step adds real scoreboard icon crops to your training data so the model learns what champions look like in an actual game — not just in clean promotional art.
+This step adds real scoreboard icon crops to your training data so the model learns what champions look like in an actual game -not just in clean promotional art.
  
 ```
 python data/collect_scoreboard_icons.py
@@ -84,10 +84,10 @@ Example filename: Swain-Vi-Ambessa-Velkoz-Morgana.png
 **How to run the script:**
  
 1. Enter the screenshot path when prompted (e.g. `scoreboard_testing/Swain-Vi-Ambessa-Velkoz-Morgana.png`)
-2. An image window will open — click the center of the **Top lane** champion icon
+2. An image window will open -click the center of the **Top lane** champion icon
 3. Then click the center of the **Support** champion icon
-4. Press **Q** to confirm — the program will automatically calculate and crop all 5 icons
-The cropped icons will be saved to your `champion_icons/` folder labeled by champion name. Collect as many screenshots as possible for better accuracy — aim for at least 10.
+4. Press **Q** to confirm -the program will automatically calculate and crop all 5 icons
+The cropped icons will be saved to your `champion_icons/` folder labeled by champion name. Collect as many screenshots as possible for better accuracy -aim for at least 10.
  
 ---
  
@@ -117,7 +117,7 @@ Saves the best performing model to `model.keras` and outputs a training accuracy
  
 ### Phase 4: Predict & Log Results (`predict/predict.py`)
  
-Run this whenever you want to process scoreboard screenshots and log the results to Excel. You do not need to retrain before each run — just run this directly.
+Run this whenever you want to process scoreboard screenshots and log the results to Excel. You do not need to retrain before each run -just run this directly.
  
 ```
 python predict/predict.py
@@ -150,15 +150,15 @@ Riot releases new champions a few times per year. When that happens, follow thes
 2. Collect a few scoreboard screenshots featuring the new champion and run `collect_scoreboard_icons.py`
 3. Re-run `preprocess.py` to rebuild the dataset
 4. Re-run `train.py` to retrain the model
-You only need to do this when new champions are released — your existing `results.xlsx` data is never affected.
+You only need to do this when new champions are released -your existing `results.xlsx` data is never affected.
  
 ---
  
 ## Notes
  
-- **Click accuracy matters** — always click as close to the center of the Top and Support icons as possible. The program interpolates all 5 positions from just these 2 clicks, so misaligned anchors will cause incorrect crops.
-- **Two-word champion names** — remove spaces when naming screenshot files (e.g. `MissFortune` not `Miss Fortune`)
-- **More scoreboard data = better accuracy** — the more real scoreboard screenshots you collect in Phase 1, the better the model will perform on real games
+- **Click accuracy matters** -always click as close to the center of the Top and Support icons as possible. The program interpolates all 5 positions from just these 2 clicks, so misaligned anchors will cause incorrect crops.
+- **Two-word champion names** -remove spaces when naming screenshot files (e.g. `MissFortune` not `Miss Fortune`)
+- **More scoreboard data = better accuracy** -the more real scoreboard screenshots you collect in Phase 1, the better the model will perform on real games
 ---
  
 ## About
